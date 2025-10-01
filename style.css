@@ -1,0 +1,51 @@
+/* Estilos Globais e de Componentes */
+html { scroll-behavior: smooth; }
+body { background-color: #0a0a1a; color: #e0e0e0; font-family: 'Poppins', sans-serif; }
+.futuristic-bg { background-color: #0a0a1a; position: relative; z-index: 1; }
+
+/* Animação do Título Principal */
+.animated-title span { display: inline-block; opacity: 0; animation: revealChar 1.5s cubic-bezier(0.2, 1, 0.2, 1) forwards; }
+@keyframes revealChar { 0% { opacity: 0; transform: translateY(30px) scale(0.8); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* Botão Call-to-Action */
+.cta-button { position: relative; border: 2px solid #00aeff; color: #00aeff; background: transparent; transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1); overflow: hidden; z-index: 1; }
+.cta-button:before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 0; background: #00aeff; transition: width 0.4s cubic-bezier(0.2, 1, 0.2, 1); z-index: -1; }
+.cta-button:hover { color: #0a0a1a; transform: scale(1.05); box-shadow: 0 0 25px rgba(0, 174, 255, 0.6); }
+.cta-button:hover:before { width: 100%; }
+
+/* Efeito de Brilho da Seção */
+.section-glow::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 1px; background: linear-gradient(90deg, transparent, #00aeff, transparent); opacity: 0.3; }
+
+/* Card de Recurso */
+.feature-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(0, 174, 255, 0.2); transition: all 0.3s ease; }
+.feature-card:hover { transform: translateY(-5px); background: rgba(0, 174, 255, 0.1); border-color: rgba(0, 174, 255, 0.5); box-shadow: 0 0 20px rgba(0, 174, 255, 0.2); }
+
+/* Animação de Scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(2.5rem); /* 40px */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos do GooeyNav */
+:root { --color-1: #00aeff; --color-2: #3bffeb; --color-3: #ff45ff; --color-4: #ffa500; }
+.effect { position: absolute; opacity: 1; pointer-events: none; display: grid; place-items: center; z-index: 1; transition: left 0.4s ease-out, top 0.4s ease-out, width 0.4s ease-out, height 0.4s ease-out; }
+.effect.text { color: white; transition: color 0.3s ease; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1rem; }
+.effect.text.active { color: #0a0a1a; }
+.effect.filter { filter: blur(8px) contrast(60) blur(0); mix-blend-mode: lighten; }
+.effect.filter::before { content: ""; position: absolute; inset: -30px; z-index: -2; background: #0a0a1a; border-radius: 9999px; }
+.effect.filter::after { content: ""; position: absolute; inset: 0; background: white; transform: scale(0); opacity: 0; z-index: -1; border-radius: 9999px; }
+.effect.active::after, .effect.filter.active::after { animation: pill 0.4s cubic-bezier(0.2, 1, 0.2, 1) both; }
+@keyframes pill { to { transform: scale(1); opacity: 1; } }
+.particle, .point { display: block; opacity: 0; width: 20px; height: 20px; border-radius: 9999px; transform-origin: center; }
+.particle { --time: 5s; position: absolute; top: calc(50% - 10px); left: calc(50% - 10px); animation: particle-anim calc(var(--time)) ease 1 -350ms; }
+.point { background: var(--color); opacity: 1; animation: point-anim calc(var(--time)) ease 1 -350ms; }
+@keyframes particle-anim { 0% { transform: rotate(0deg) translate(var(--start-x), var(--start-y)); opacity: 1; animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); } 70% { transform: rotate(calc(var(--rotate) * 0.5)) translate(calc(var(--end-x) * 1.2), calc(var(--end-y) * 1.2)); opacity: 1; animation-timing-function: ease; } 85% { transform: rotate(calc(var(--rotate) * 0.66)) translate(var(--end-x), var(--end-y)); opacity: 1; } 100% { transform: rotate(calc(var(--rotate) * 1.2)) translate(calc(var(--end-x) * 0.5), calc(var(--end-y) * 0.5)); opacity: 1; } }
+@keyframes point-anim { 0% { transform: scale(0); opacity: 0; animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); } 25% { transform: scale(calc(var(--scale) * 0.25)); } 38% { opacity: 1; } 65% { transform: scale(var(--scale)); opacity: 1; animation-timing-function: ease; } 85% { transform: scale(var(--scale)); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
+.nav-list li a { color: #aaa; transition: color 0.3s ease; }
+.nav-list li:hover a { color: white; }
+.nav-list li.active a { color: transparent; }

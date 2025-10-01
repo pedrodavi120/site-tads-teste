@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TADS - Análise e Desenvolvimento de Sistemas - UFRN</title>
+    <link rel="shortcut icon" href="files/tads-logo-puro.png">
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="futuristic-bg">
+
+    <!-- Fundo 3D -->
+    <div id="three-bg" style="position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;"></div>
+
+    <!-- Cabeçalho com Navegação -->
+    <header class="w-full flex justify-center items-center py-4 fixed top-0 left-0 right-0 z-50 bg-[#0a0a1a]/50 backdrop-blur-md">
+        <div id="gooey-nav-container" class="relative">
+            <nav class="flex relative" style="transform: translate3d(0,0,0.01px)">
+                <ul id="nav-list" class="nav-list flex flex-wrap justify-center gap-2 md:gap-4 list-none p-0 px-2 m-0 relative z-[3]">
+                    <li class="relative cursor-pointer">
+                        <a href="#home" data-index="0" class="outline-none py-3 px-4 md:py-4 md:px-6 inline-block font-semibold relative z-10 text-sm md:text-base">O Curso</a>
+                    </li>
+                    <li class="relative cursor-pointer">
+                        <a href="#atuacao" data-index="1" class="outline-none py-3 px-4 md:py-4 md:px-6 inline-block font-semibold relative z-10 text-sm md:text-base">Áreas de Atuação</a>
+                    </li>
+                    <li class="relative cursor-pointer">
+                        <a href="#agronegocio" data-index="2" class="outline-none py-3 px-4 md:py-4 md:px-6 inline-block font-semibold relative z-10 text-sm md:text-base">Foco em Agronegócio</a>
+                    </li>
+                    <li class="relative cursor-pointer">
+                        <a href="#algolearn" data-index="3" class="outline-none py-3 px-4 md:py-4 md:px-6 inline-block font-semibold relative z-10 text-sm md:text-base">AlgoLearn</a>
+                    </li>
+                    <li class="relative cursor-pointer">
+                        <a href="#inscricao" data-index="4" class="outline-none py-3 px-4 md:py-4 md:px-6 inline-block font-semibold relative z-10 text-sm md:text-base">Inscreva-se</a>
+                    </li>
+                </ul>
+            </nav>
+            <span id="effect-filter" class="effect filter"></span>
+            <span id="effect-text" class="effect text"></span>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="w-full max-w-5xl mx-auto relative z-10 px-4">
+        <!-- Seção Home -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center">
+            <div class="flex items-center gap-8 mb-8">
+                <img src="files/tads-logo.png" alt="Logo TADS" class="h-24 md:h-32"/>
+                <img src="files/ufrn-logo.png" alt="Logo UFRN" class="h-16 md:h-20"/>
+            </div>
+            <h1 id="main-title" class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animated-title tracking-tight">
+                Analise e Desenvolvimento de Sistemas
+            </h1>
+            <p class="max-w-3xl text-base md:text-lg text-gray-400 mb-8" style="animation: revealChar 1.5s cubic-bezier(0.2, 1, 0.2, 1) 0.5s backwards;">
+                Formar profissionais capazes de realizar atividades de concepção, especificação, projeto, implementação, avaliação, suporte e manutenção de sistemas computacionais, buscando soluções para o setor produtivo e para a melhoria da qualidade de vida.
+            </p>
+            <a href="https://sigaa.ufrn.br/sigaa/public/curso/curriculo.jsf" target="_blank" rel="noopener noreferrer" class="cta-button inline-block font-bold py-3 px-8 rounded-full text-lg" style="animation: revealChar 1.5s cubic-bezier(0.2, 1, 0.2, 1) 0.8s backwards;">
+                Conheça a Grade Curricular
+            </a>
+        </section>
+
+        <!-- Seção Áreas de Atuação -->
+        <section id="atuacao" class="py-24 relative section-glow">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Áreas de Atuação</h2>
+                <p class="max-w-3xl mx-auto text-gray-400">Nossos egressos estão preparados para atuar em diversas frentes do mercado de tecnologia, exercendo competências técnicas e visão integral, ética e humanística.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="h-full animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="feature-card p-8 rounded-2xl h-full">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Análise de Sistemas</h3>
+                        <p class="text-gray-400">Atue na concepção, especificação e projeto de sistemas computacionais.</p>
+                    </div>
+                </div>
+                <div class="h-full animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="feature-card p-8 rounded-2xl h-full">
+                        <div class="text-4xl mb-4">⚙️</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Engenharia de Software</h3>
+                        <p class="text-gray-400">Participe da implementação, avaliação, suporte e manutenção de software.</p>
+                    </div>
+                </div>
+                <div class="h-full animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="feature-card p-8 rounded-2xl h-full">
+                        <div class="text-4xl mb-4">📈</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Gerência de Projetos</h3>
+                        <p class="text-gray-400">Coordene equipes e projetos de tecnologia, garantindo entregas de sucesso.</p>
+                    </div>
+                </div>
+                <div class="h-full animate-on-scroll" style="transition-delay: 400ms;">
+                    <div class="feature-card p-8 rounded-2xl h-full">
+                        <div class="text-4xl mb-4">🗃️</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Administração de Bancos de Dados</h3>
+                        <p class="text-gray-400">Gerencie e mantenha a integridade e segurança dos dados das organizações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Agronegócio -->
+        <section id="agronegocio" class="py-24 relative section-glow">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Integração com o Agronegócio</h2>
+                <p class="max-w-3xl mx-auto text-gray-400">O curso promove a integração entre as ciências agrárias e a Tecnologia da Informação (TI), preparando o profissional para propor soluções tecnológicas para a cadeia do agronegócio e da agricultura familiar.</p>
+            </div>
+            <div class="animate-on-scroll">
+                <div class="feature-card p-8 md:p-12 rounded-2xl text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Desenvolvimento Regional e Nacional</h3>
+                    <p class="text-gray-300 leading-relaxed">Considerando a importância do setor primário da economia, um curso desta natureza é estratégico para o desenvolvimento regional e nacional. Nossos tecnólogos possuem capacidade técnico-científica e visão integral, comprometidos com o bem-estar da sociedade e com o desenvolvimento sustentável.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção AlgoLearn Quest -->
+        <section id="algolearn" class="py-24 relative section-glow">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Desafie-se com AlgoLearn Quest</h2>
+                <p class="max-w-3xl mx-auto text-gray-400">Teste seus conhecimentos em C++ em nossa plataforma de desafios de programação. Resolva problemas, suba no ranking e torne-se um mestre da programação competitiva.</p>
+            </div>
+            <div class="animate-on-scroll text-center">
+                 <a href="https://algolearn-quest.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-button inline-block font-bold py-3 px-8 rounded-full text-lg">
+                    Acessar AlgoLearn Quest
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Inscrição -->
+        <section id="inscricao" class="py-24 flex flex-col items-center text-center">
+            <div class="animate-on-scroll text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Faça Parte do Futuro da Tecnologia</h2>
+                <p class="max-w-2xl mx-auto text-base md:text-lg text-gray-400 mb-8">Inscreva-se no processo seletivo e venha desenvolver as tecnologias que irão transformar o mercado e a sociedade.</p>
+                <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                    <input type="email" placeholder="seu_email@dominio.com" class="w-full sm:w-auto bg-gray-900/50 border border-cyan-400/50 rounded-full px-6 py-3 text-center text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all"/>
+                    <button class="cta-button font-bold py-3 px-8 rounded-full text-lg w-full sm:w-auto">
+                        Receber Novidades
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="w-full max-w-5xl mx-auto border-t border-cyan-400/20 text-center py-8 text-gray-500 px-4">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://www.facebook.com/TADSEAJUFRN/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"></path>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/tadseaj/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"></path>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2025 TADS - Universidade Federal do Rio Grande do Norte</p>
+    </footer>
+
+    <!-- Scripts JS -->
+    <!-- Three.js é necessário antes do nosso script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
